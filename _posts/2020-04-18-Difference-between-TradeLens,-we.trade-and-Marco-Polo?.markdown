@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Difference between TradeLens, we.trade & Marco Polo?"
+title:  "Difference between TradeLens, we.trade and Marco Polo?"
 date:   2020-04-18 09:00:00 -0700
 categories: blockchain
 ---
