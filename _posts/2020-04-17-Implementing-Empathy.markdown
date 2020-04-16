@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Implementing empathy"
-date:   2020-04-17 09:00:00 -0700
+date:   2020-04-16 09:00:00 -0700
 categories: social
 ---
 
