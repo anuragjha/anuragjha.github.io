@@ -16,7 +16,7 @@
 title: Anurag's web
 email: anuragakjha@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Let us take a moment to feel gratidude towards the brave warriors of Coronavirus. Let us Stay Home, Wash hands, Save Lives !
+  This is my tech blog and a platform to connect with you all. Let us take a moment to feel gratidude towards the brave warriors of Coronavirus. Let us Stay Home, Wash hands, Save Lives !
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ajhatweets
