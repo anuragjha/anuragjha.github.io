@@ -2,7 +2,7 @@
 layout: post
 title:  "Building first docker container"
 date:   2020-04-16 21:22:39 -0700
-categories: [docker, container, dev]
+categories: [docker]
 ---
 
 {:refdef: style="text-align: center;"}
