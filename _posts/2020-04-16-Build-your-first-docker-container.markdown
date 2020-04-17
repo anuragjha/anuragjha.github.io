@@ -9,7 +9,7 @@ categories: [docker]
 ![Docker container](/images/containers.jpg)
 {: refdef}
 
-Today we will do a practical. We will create a docker container for our program. In current technology scenario, we can easily utilize container technologies like Docker to make our application portable and maintainable.
+##### Today we will do a practical. We will create a docker container for our program. In current technology scenario, we can easily utilize container technologies like Docker to make our application portable and maintainable.
 
 ### 1. Installing Docker
   First we download docker on our system. We will use the following link `https://www.docker.com/get-started` to download it. Once downloaded use terminal to run this command:
