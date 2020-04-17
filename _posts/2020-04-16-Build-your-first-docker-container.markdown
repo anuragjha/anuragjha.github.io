@@ -2,7 +2,7 @@
 layout: post
 title:  "Building first docker container"
 date:   2020-04-16 21:22:39 -0700
-categories: [docker, container, devops]
+categories: [docker, container, dev]
 ---
 
 {:refdef: style="text-align: center;"}
@@ -11,7 +11,7 @@ categories: [docker, container, devops]
 
 Today we will do a practical. We will create a docker container for our program. In current technology scenario, we can easily utilize container technologies like Docker to make our application portable and maintainable.
 
-1.
+### 1. Installing Docker
   First we download docker on our system. We will use the following link `https://www.docker.com/get-started` to download it. Once downloaded use terminal to run this command:
 ```
 $ docker -v
@@ -44,7 +44,7 @@ $ docker container rm {Name}
 $ docker container rm $(docker container ls -aq)
 ```
 
-2.
+### 2. Installing Golang
 Then we create a program that we want to run in our container. We can use any program that we have or we can just write small one here.
 
 We will create a program in golang language. It is a wonderful language to keep in your armory. Even docker is built in golang. To run a golang program, we will need Go binaries in our system. This is the webpage that has link to download Go binaries, `https://golang.org/dl/`. Once downloaded use terminal to run this command:
@@ -57,7 +57,7 @@ $ go version go1.13 darwin/amd64
 ```
 OK so we have successfully installed golang. We have done the most difficult task of this practical. Now it is time to get reward for our efforts. Let us proceed and create a golang program.
 
-3.
+### 3. Creating program
 We begin by creating a folder, let us name is simpleGo. Inside this folder we place main.go file.
 ```
 simpleGo
@@ -103,7 +103,7 @@ Then on browser, we can test the following endpoints,
 
 Once we get a successful response, we can move to containerize our application.
 
-4.
+### 4. Creating Dockerfile
 It is a convention, that we name the file that contains docker code as Dockerfile. Let us create a Dockerfile in our simpleGo folder.
 ```
 simpleGo
@@ -147,7 +147,7 @@ Finally we want to run the binary that we created earlier. We specify this by `C
 
 Phew! that was a lot of theory. Running our docker container consist of 2 steps. The first one is to build the docker image and the next is to run the docker image.
 
-5.
+### 5. Building Docker image
 To build the docker image (and tag it), we use the following command:
 ```
 $ docker build --tag simplego:1.0 .
@@ -160,7 +160,7 @@ Successfully tagged simplego:1.0
 If this command did not run successfully, then most likely the problem is due to container with same name or that the port we want to run on is already in use. In either case, use the docker command from top of this post to list the containers, stop and remove them.
 
 
-6.
+### 6. Running Docker image
 To run the created docker image, simplego:1.0 we use the following command:
 ```
 $ docker run --publish 8000:8080 --detach --name sg simplego:1.0
@@ -169,5 +169,5 @@ The `--publish 8000:8080` part of the command, specifies that the Docker contain
 
 If this command did not run successfully, then most likely the problem is due to container with same name or that the port we want to run on is already in use. In either case, use the docker command from top of this post to list the containers, stop and remove them.
 
-7.
+### 7. Final
 We can now test that our container is running properly. We can do this by hitting url `localhost:8000/` and `localhost:8000/ping` ok. If we are receiving correct responses then its time to pat our back. Lets wash our hands and dance a little. See you guys in my next post.
