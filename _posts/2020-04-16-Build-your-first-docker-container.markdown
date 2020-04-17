@@ -5,7 +5,9 @@ date:   2020-04-16 21:22:39 -0700
 categories: docker
 ---
 
-![Docker container](/images/containers.jpg){: .center}
+{:refdef: style="text-align: center;"}
+![Docker container](/images/containers.jpg)
+{: refdef}
 
 Today we will do a practical. We will create a docker container for our program. In current technology scenario, we can easily utilize container technologies like Docker to make our application portable and maintainable.
 
