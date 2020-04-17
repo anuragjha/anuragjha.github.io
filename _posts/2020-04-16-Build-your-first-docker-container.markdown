@@ -5,12 +5,12 @@ date:   2020-04-16 21:22:39 -0700
 categories: docker
 ---
 
-![image](./images/containers.jpg)
+![image](images/containers.jpg)
 
 Today we will do a practical. We will create a docker container for our program. In current technology scenario, we can easily utilize container technologies like Docker to make our application portable and maintainable.
 
 1.
-  First we download docker on our system. We will use the following link https://www.docker.com/get-started to download it. Once downloaded use terminal to run this command:
+  First we download docker on our system. We will use the following link `https://www.docker.com/get-started` to download it. Once downloaded use terminal to run this command:
 ```
 $ docker -v
 ```
@@ -41,7 +41,7 @@ $ docker container rm $(docker container ls -aq)
 2.
 Then we create a program that we want to run in our container. We can use any program that we have or we can just write small one here.
 
-We will create a program in golang language. It is a wonderful language to keep in your armory. Even docker is built in golang. To run a golang program, we will need Go binaries in our system. This is the webpage that has link to download Go binaries, https://golang.org/dl/. Once downloaded use terminal to run this command:
+We will create a program in golang language. It is a wonderful language to keep in your armory. Even docker is built in golang. To run a golang program, we will need Go binaries in our system. This is the webpage that has link to download Go binaries, `https://golang.org/dl/`. Once downloaded use terminal to run this command:
 ```
 $ go version
 ```
@@ -59,7 +59,7 @@ simpleGo
   |-> main.go
 ```
 
-This code creates simply a server that responds to localhost:8080/ and localhost:8080/ping .
+This code creates simply a server that responds to `localhost:8080/` and `localhost:8080/ping` .
 ```
 # put in file main.go
 package main
@@ -92,8 +92,8 @@ To run this program, we can open a terminal and move to the simpleGo folder (the
 $ go run main.go
 ```
 Then on browser, we can test the following endpoints,
-a. localhost:8080/
-b. localhost:8080/ping
+- `localhost:8080/`
+- `localhost:8080/ping`
 
 Once we get a successful response, we can move to containerize our application.
 
@@ -131,7 +131,7 @@ EXPOSE 8080
 # Command to run when starting the container
 CMD ["./main"]
 ```
-Let us go through the YAML code in our Dockerfile. The first line `FROM golang:alpine` a wow moment in our Dockerfile. Here we expect that an Alpine Linux distribution with golang installed will become available to us. And indeed it does, from DockerHub. DockerHub (https://hub.docker.com/search?q=&type=image) is a know site site that contains lot of images, which we can use right off the bat and we can build on top of it. We then set the golang environment variables with ENV statement.
+Let us go through the YAML code in our Dockerfile. The first line `FROM golang:alpine` a wow moment in our Dockerfile. Here we expect that an Alpine Linux distribution with golang installed will become available to us. And indeed it does, from DockerHub. DockerHub (`https://hub.docker.com/search?q=&type=image`) is a know site site that contains lot of images, which we can use right off the bat and we can build on top of it. We then set the golang environment variables with ENV statement.
 
 Next we crate a working directory, in our newly created Alpine distribution. WORKDIR statement creates the sepecified folder structure and bring us into the child directory simpleGo. Once inside the folder, we copy all the files from our local simpleGo directory to Alpine simpleGo directory. We can express this simply as `COPY . .`, where each dot signify the current directory. First dot here tells us that files from current local directory (remember we are going to run our Dockerfile from inside simpleGo local directory.) Second dot tells us that copy to the current directory in out Docker workflow.
 
