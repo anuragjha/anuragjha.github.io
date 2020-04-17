@@ -25,7 +25,7 @@ So now we have successfully installed docker. It is a good time to cover some ve
 ```
 $ docker container ls -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS                    NAMES
-4ab39b2e1f70        simplego:1.0   "./main"                 2 hours ago         Up 2 hours                  0.0.0.0:8000->8080/tcp   bb
+4ab39b2e1f70        simplego:1.0        "./main"                 2 hours ago         Up 2 hours                  0.0.0.0:8000->8080/tcp   bb
 ```
 - Command to stop a docker container by name
 ```
