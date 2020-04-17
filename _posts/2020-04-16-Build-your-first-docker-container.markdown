@@ -21,22 +21,26 @@ It should result in something like this:
 Docker version 19.03.8, build afacb8b
 ```
 So now we have successfully installed docker. It is a good time to cover some very important docker commands. These commands will help us to manage our docker containers. We will keep referring back to these commands in our Docker life.
+- Command to list all the docker containers on the system
 ```
-# command to list all the docker containers on the system
 $ docker container ls -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS                    NAMES
 4ab39b2e1f70        simplego:1.0   "./main"                 2 hours ago         Up 2 hours                  0.0.0.0:8000->8080/tcp   bb
 ```
+- Command to stop a docker container by name
 ```
-# command to stop a docker container by name
 $ docker container stop {Name}
-# command to stop all docker containers
+```
+- command to stop all docker containers
+```
 $ docker container stop $(docker container ls -aq)
 ```
+- command to remove a docker container by name
 ```
-# command to remove a docker container by name
 $ docker container rm {Name}
-# command to remove all docker containers
+```
+- command to remove all docker containers
+```
 $ docker container rm $(docker container ls -aq)
 ```
 
